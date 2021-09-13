@@ -15,11 +15,18 @@ $playfair-display: 'Playfair Display',sarif;
   // padding-left: 10vw;
   // padding-top: 10vh;
   // //end Background
+  @include media(">=phone", "<tablet") {
+    flex-direction: column;
+  }
+  // @include media(">=tablet", "<desktop") {
+  //   font-size: 16px;
+  // }
   .name {
     font-weight: 600;
   }
 
   .links-wrapper {
+
     button {
       text-decoration: none;
       padding: 10px;
@@ -31,6 +38,12 @@ $playfair-display: 'Playfair Display',sarif;
       outline: none;
       border: 0px;
       cursor: pointer;
+      @include media("<lgphone") {
+        font-size: 12px;
+      }
+      @include media("<phone") {
+        font-size: 10px;
+      }
       &:hover {
         opacity: 1;
       }
